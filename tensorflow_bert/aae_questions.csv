@@ -1,0 +1,47 @@
+0,Amazon Rekognition で顔認証のアプリを作っています。Amazon S3 → AWS Lambda → Rekognition が期待通り動作しません。
+0,S3 に画像を置かずにリアルタイムで画像認識させたい場合はどういう構成がよいでしょう？
+0,Rekoginiton の API を呼び出し、S3 に結果情報を Put するだけの処理をする Lambda に時間が掛かっています。どうすれば高速化できますか。
+0,Amazon API Gateway の AWS Service Proxy を通じて、 Amazon Rekognition の searchFacesByImage API を呼びたいがうまくいかない。
+0,Amazon SageMaker で、deploy() 時にエンドポイント名を指定したい。リファレンスには渡せそうなパラメータがあるが、指定の仕方がわからない。
+0,オンプレミスでData warehouse (Teradata) を運用しているが、それを Amazon Redshift および Amazon RDS へ移行したい。BI ツールとして Tableauを使用している。
+0,Amazon SageMaker 上で scikit-learn を利用するしているが、日本語がうまく扱えない。
+0,Amazon Redshift のデータを定期的に unload して Amazon S3 に置きたい。
+0,AWS Glue の Python shell ジョブは Python 2.7 しかサポートされていないと思います。いつになったら Python 3 に対応するのでしょうか？
+1,Amazon Elastic Container Service (Amazon ECS) / Amazon Elastic Container Service for Kubernetes (Amazon EKS) / AWS Fargate の違いは何ですか？
+1,EKS 利用時のセキュアなネットワーク構成はどのように設計しますか？
+1,EKS を利用して環境構築中です。kubectl get svc を実行したら error: the server doesn't have a resource type "svc" と表示されるのですが原因は何でしょう？
+1,Kubernetes の Worker Node を AWS CloudFormation で作ったらスタックが作成がエラーになりました。
+1,Worker Node が クラスターに参加しません。
+1,定期的にコンテナを起動し処理を行いたいです。また、起動する各コンテナでは異なる処理を想定しています (DB の内容に応じて処理を変えるなど)。現在、ECS のスケジューリング機能 (Fargate) を使っていますが、他にどのような方法がありますか？
+1,ECS サービス制限「アカウント別のリージョンごとに、Fargate 起動タイプを使用するタスクの数」の意味は何ですか？
+1,ECS にデプロイしても古いタスクがしばらく残ると思います。どこで制御できますか？
+1,ECS のログは何をどのタイミングで出せばいいですか？
+1,Fargate で net.core.somaxconn を変更したい
+1,ECS の環境を構築しており、GitLab を使っています。CI/CD はどうすれば実現できますか？
+1,Amazon ECS で本番/開発環境を作る場合、クラスターは分けたほうがいいか。
+1,Amazon ECS 利用時に AutoScaling Group を自分で作るときは空のクラスターを作るでいいか。
+1,AWS Fargate のタスクがヘルスチェックに通らない。
+1,Fargate のタスク定義をアプリケーションユーザごとにスケールさせたいです。
+2,SELECT DISTINCT が遅いような気がします。これまで開発環境 (SQLite on Cloud9) では問題なかったのですが、本番環境 (RDS MySQL) で遅くなったので原因を特定したいです。
+2,EBSのスナップショットを5世代ぶんとると、料金は5倍になりますか？
+2,Amazon S3 Glacier の過去事例などありますか？ (普段は使わない大量ファイルを保管しておきたいです。)
+2,Amazon RDS MySQL にあるデータを随時 Amazon S3 に差分エクスポートしていき、Amazon Athena で分析したい。RDS にある既存データは10億レコード。
+2,オンプレミス環境から Amazon RDS に接続したい場合は、RDS を public accessible にしなければならないか。
+2,Amazon RDS のストレージ不足のアラームが出た。必要になった際に容量を増やせばダウンタイム発生しないか？
+2,データ処理基盤を作るにあたって AWS Glue を検討している。エラー処理やワークフロー管理をどうしたらいいか
+2,DB に対して大量に検索するとき、何を考慮すればよいか。
+2,Amazon S3 に配置したオブジェクトを一定期間過ぎたら削除したい。
+2,Amazon RDS スケールアップの際のダウンタイムについて教えて下さい。
+3,AWS Lambda から Amazon RDS への接続を考えているが、あまり相性が良くないというのも聞きます。Lambda はそれなりの起動数になることも想定されるがどうすればいいですか？
+3,スマホアプリの開発を行っています。Push 通知を行うと急激にアクセスが増えて、サービスがダウンすることがあったどうすればよいでしょう？
+3,Lambda の同時実行数の考え方を知りたいです。
+3,Q: Amaozn S3 への画像アップロードをトリガーとして AWS Lambda を走らせている。言語は Python。望んだ処理（S3 から元画像を取得し、加工してS3に書き戻す処理）は行われているようだが、毎回必ず Lambda が複数回キックされる。どうすれば？
+3,AWS Lambda の処理時間が、UI 上は1秒ほどでレスポンスが返ってきているように感じるのに、処理終了のログが出力されるまでには20秒ほどかかっているように見える。なぜか？
+3,Amazon API Gateway – AWS Lambda (Golang) なサーバーレス構成のシステム。ローカルで Golang プログラムを開発しているときは 400 ms くらいで実行が完了していたが、AWS 上にデプロイして自宅からインターネット経由でアクセスしてみたら 900 ms ほどかかってしまう。パフォーマンスを上げるにはどうすれば？
+3,Amazon API Gateway と AWS Lambda で構築した API サービスを開発者向けに公開しようとしている。利用者ごとに、処理データ量、処理時間を計測して、その量に応じて課金したい。どういうアーキテクチャがありうるか？利用者には最新の課金状況を確認できるダッシュボードを提供する。月次でユーザーごとに課金額を集計し、請求する。
+3,Amazon API Gateway で Cognito User Pools グループごとにアクセスできるパスを分けたい。
+3,ネイティブアプリ同士で直接やりとりをしたい。
+3,サーバーレスアプリケーションで RDB を検索して JSON を返すような API は作れるか
+3,Amazon API Gateway + AWS Lambda + Amazon S3 のサーバーレスシステムを運用している。外部の IdP と連携して SAML の認証をしたい。
+3,AWS サーバーレスアプリケーションモデル (AWS SAM) で API キーを定義する方法を教えて下さい。
+3,モバイルアプリケーション開発について質問させて下さい。ユーザ登録をして、そのユーザ情報を管理画面で参照させるようなモバイルアプリケーションを新規で開発したいです。サインアップのときから DynamoDB にユーザ情報を登録して参照もそこから、という検討をしているがどうでしょうか？
